@@ -4,7 +4,7 @@
     "title": "Example Card",
     "location": "crm.record.tab",
     "module": {
-      "file": "Extension.tsx"
+      "file": "Extension.jsx"
     },
     "objectTypes": [{ "name": "contacts" }]
   }
