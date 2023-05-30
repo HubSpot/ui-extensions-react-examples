@@ -26,7 +26,9 @@ The top level component that manages the extension. It fetches the restaurants a
 A paginated, searchable table of restaurants.
 
 ![Example gif of the Restaurants Search component filtering results in a table in real time](examples/RestaurantsSearch.gif)
+
 ### [RestaurantMenu.tsx](src/app/extensions/components/RestaurantMenu.tsx)
+
 A list of menu items with item summaries and a button to go into more detail.
 
 ![Example gif of the Restaurant Menu component switching between a list of menu items and menu item details](examples/RestaurantMenu.gif)
