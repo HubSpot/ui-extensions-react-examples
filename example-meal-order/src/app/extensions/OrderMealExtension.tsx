@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { hubspot } from '@hubspot/ui-extensions';
 import { OrderMealCard } from './components/OrderMealCard';
 
