@@ -30,6 +30,7 @@ export const RestaurantsTable = ({
       paginated={pageCount > 1}
       pageCount={pageCount}
       onPageChange={onPageChange}
+      showFirstLastButtons={false}
     >
       <TableBody>
         {paginatedRestaurants.map((restaurant) => (
