@@ -148,11 +148,13 @@ export const OrderMealCard = ({
       )}
       <Divider />
       <Cart cart={cart} onRemoveClick={handleRemoveClick} />
-      <Checkout
-        subtotal={subtotal}
-        deliveryCost={totalDeliveryCost}
-        onCheckoutClick={handleCheckoutClick}
-      />
+      {cart.length > 0 && (
+        <Checkout
+          subtotal={subtotal}
+          deliveryCost={totalDeliveryCost}
+          onCheckoutClick={handleCheckoutClick}
+        />
+      )}
     </Stack>
   );
 };
