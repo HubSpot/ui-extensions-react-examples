@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/HubSpot/ui-extensibility-react-hello-world#readme",
   "dependencies": {
-    "@hubspot/ui-extensions": "^0.0.1-prealpha.7"
+    "@hubspot/ui-extensions": "^0.0.1-beta.1"
   }
 }
