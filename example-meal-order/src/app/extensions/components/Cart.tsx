@@ -23,7 +23,7 @@ export const Cart = ({ cart, onRemoveClick }: CartProps) => {
   }
 
   return (
-    <Stack>
+    <Stack align="stretch">
       <Heading>Cart</Heading>
       <Table>
         <TableBody>
