@@ -19,6 +19,6 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@hubspot/ui-extensions-dev-server": "^0.0.1-beta.0"
+    "@hubspot/ui-extensions-dev-server": "latest"
   }
 }
