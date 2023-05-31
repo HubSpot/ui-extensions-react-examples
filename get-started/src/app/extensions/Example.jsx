@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Tile,
-  Button,
-  Text,
-  Input,
-  Stack,
-  hubspot,
-} from '@hubspot/ui-extensions';
+import { Button, Text, Input, Stack, hubspot } from '@hubspot/ui-extensions';
 
 hubspot.extend(({ context, runServerlessFunction, actions }) => (
   <Extension
