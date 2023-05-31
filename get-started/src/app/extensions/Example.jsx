@@ -9,6 +9,7 @@ import {
   hubspot,
 } from '@hubspot/ui-extensions';
 
+
 // Define the extension to be run within the Hubspot CRM
 hubspot.extend(({ context, runServerlessFunction, actions }) => (
   <Extension
