@@ -52,7 +52,7 @@ const Extension = ({ context, runServerless, sendAlert }) => {
       <Stack>
         <Text>
           What now? Explore all available{' '}
-          <Link src="https://developers.hubspot.com/docs/platform/ui-extension-components">
+          <Link href="https://developers.hubspot.com/docs/platform/ui-extension-components">
             UI components
           </Link>
           , get an overview of{' '}
