@@ -9,7 +9,6 @@ import {
   hubspot,
 } from '@hubspot/ui-extensions';
 
-
 // Define the extension to be run within the Hubspot CRM
 hubspot.extend(({ context, runServerlessFunction, actions }) => (
   <Extension
@@ -36,19 +35,15 @@ const Extension = ({ context, runServerless, sendAlert }) => {
     <>
       <Text>
         <Text format={{ fontWeight: 'bold' }}>
-          Your first UI Extension is ready!
+          Your first UI extension is ready!
         </Text>
         Congratulations, {context.user.firstName}! You just deployed your first
         HubSpot UI extension. This example demonstrates how you would send
-        parameters from your React frontend to the serverless function and get
+        parameters from your React frontend to the serverless function and get a
         response back.
       </Text>
       <Stack>
-        <Input
-          name="text"
-          label="Send to serverless"
-          onInput={(t) => setText(t)}
-        />
+        <Input name="text" label="Send" onInput={(t) => setText(t)} />
         <Button type="submit" onClick={run}>
           Click me
         </Button>
@@ -56,9 +51,13 @@ const Extension = ({ context, runServerless, sendAlert }) => {
       <Divider />
       <Stack>
         <Text>
-          What now? Get an overview of{' '}
+          What now? Explore all available{' '}
+          <Link href="https://developers.hubspot.com/docs/platform/ui-extension-components">
+            UI components
+          </Link>
+          , get an overview of{' '}
           <Link href="https://developers.hubspot.com/docs/platform/ui-extensions-overview">
-            UI Extensions
+            UI extensions
           </Link>
           , learn how to{' '}
           <Link href="https://developers.hubspot.com/docs/platform/create-ui-extensions">
@@ -70,7 +69,7 @@ const Extension = ({ context, runServerless, sendAlert }) => {
           </Link>
           , or check out our{' '}
           <Link href="https://github.com/HubSpot/ui-extensions-react-examples">
-            Code Samples
+            code Samples
           </Link>
           .
         </Text>
