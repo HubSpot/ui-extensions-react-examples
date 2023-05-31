@@ -1,9 +1,9 @@
 {
   "projects": [
     {
-      "name": "get-started",
+      "name": "hello-world",
       "label": "Get Started with UI Extensions",
-      "path": "get-started",
+      "path": "hello-world",
       "insertPath": null
     },
     {
