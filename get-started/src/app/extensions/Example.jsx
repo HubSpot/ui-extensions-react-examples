@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
-import { Button, Text, Input, Stack, hubspot } from '@hubspot/ui-extensions';
+import {
+  Divider,
+  Link,
+  Button,
+  Text,
+  Input,
+  Stack,
+  hubspot,
+} from '@hubspot/ui-extensions';
 
+
+// Define the extension to be run within the Hubspot CRM
 hubspot.extend(({ context, runServerlessFunction, actions }) => (
   <Extension
     context={context}
@@ -9,8 +19,12 @@ hubspot.extend(({ context, runServerlessFunction, actions }) => (
   />
 ));
 
+// Define the Extension component, taking in runServerless, context, & sendAlert as props
 const Extension = ({ context, runServerless, sendAlert }) => {
   const [text, setText] = useState('');
+
+  // Call serverless function to execute with parameters.
+  // The name `myFunc` as per configurations inside `serverless.json`
 
   const run = () => {
     runServerless({ name: 'myFunc', parameters: { text: text } }).then((resp) =>
@@ -38,6 +52,28 @@ const Extension = ({ context, runServerless, sendAlert }) => {
         <Button type="submit" onClick={run}>
           Click me
         </Button>
+      </Stack>
+      <Divider />
+      <Stack>
+        <Text>
+          What now? Get an overview of{' '}
+          <Link href="https://developers.hubspot.com/docs/platform/ui-extensions-overview">
+            UI Extensions
+          </Link>
+          , learn how to{' '}
+          <Link href="https://developers.hubspot.com/docs/platform/create-ui-extensions">
+            add a new custom card
+          </Link>
+          , jump right in with our{' '}
+          <Link href="https://developers.hubspot.com/docs/platform/ui-extensions-quickstart">
+            Quickstart Guide
+          </Link>
+          , or check out our{' '}
+          <Link href="https://github.com/HubSpot/ui-extensions-react-examples">
+            Code Samples
+          </Link>
+          .
+        </Text>
       </Stack>
     </>
   );
