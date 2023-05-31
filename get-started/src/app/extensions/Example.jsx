@@ -69,7 +69,7 @@ const Extension = ({ context, runServerless, sendAlert }) => {
           </Link>
           , or check out our{' '}
           <Link href="https://github.com/HubSpot/ui-extensions-react-examples">
-            Code Samples
+            code Samples
           </Link>
           .
         </Text>
