@@ -23,13 +23,13 @@ export const RestaurantRow = ({ restaurant, onClick }: RestaurantRowProps) => {
   return (
     <TableRow>
       <TableCell>
-        <Stack distance="xs">
+        <Stack direction="row" distance="xs">
           <Image src={image} width={80} />
-          <Stack direction="column" distance="flush">
+          <Box>
             <Heading>{name}</Heading>
             <Text variant="microcopy">{category}</Text>
             <Rating value={rating} />
-          </Stack>
+          </Box>
         </Stack>
       </TableCell>
       <TableCell>
