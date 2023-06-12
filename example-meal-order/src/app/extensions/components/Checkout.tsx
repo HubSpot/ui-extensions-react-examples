@@ -34,7 +34,7 @@ export const Checkout = ({
           Total: {formatPrice(subtotal + delivery)}
         </Text>
       </Heading>
-      <Box grow={false}>
+      <Box>
         <Stack>
           <Textarea
             required={true}
