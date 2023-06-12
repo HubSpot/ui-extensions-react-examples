@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Input, Stack } from '@hubspot/ui-extensions';
+import { Box, Input, Stack } from '@hubspot/ui-extensions';
 import { RestaurantsTable } from './RestaurantsTable';
 import { RestaurantsSearchProps } from '../types';
 
@@ -29,20 +29,24 @@ export const RestaurantsSearch = ({
 
   return (
     <Stack>
-      <Input
-        name="search"
-        label={`Search for restaurants near ${contactName}`}
-        placeholder="All Star Sandwich Bar"
-        tooltip="You can search restaurant names and categories"
-        onInput={handleSearch}
-      />
-      <RestaurantsTable
-        pageNumber={pageNumber}
-        onClick={handleRestaurantClick}
-        searchTerm={searchTerm}
-        restaurants={searchResults}
-        onPageChange={setPageNumber}
-      />
+      <Box>
+        <Input
+          name="search"
+          label={`Search for restaurants near ${contactName}`}
+          placeholder="All Star Sandwich Bar"
+          tooltip="You can search restaurant names and categories"
+          onInput={handleSearch}
+        />
+      </Box>
+      <Box alignSelf="stretch">
+        <RestaurantsTable
+          pageNumber={pageNumber}
+          onClick={handleRestaurantClick}
+          searchTerm={searchTerm}
+          restaurants={searchResults}
+          onPageChange={setPageNumber}
+        />
+      </Box>
     </Stack>
   );
 };

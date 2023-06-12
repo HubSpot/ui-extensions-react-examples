@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   ButtonRow,
   Divider,
@@ -33,26 +34,30 @@ export const Checkout = ({
           Total: {formatPrice(subtotal + delivery)}
         </Text>
       </Heading>
-      <Textarea
-        required={true}
-        name="message"
-        label="Message"
-        onInput={setMessage}
-        validationMessage={
-          !message ? 'Please add a nice message for your contact.' : ''
-        }
-      />
-      <ButtonRow>
-        <Button
-          disabled={!message}
-          variant="primary"
-          onClick={() => {
-            onCheckoutClick(message);
-          }}
-        >
-          Checkout
-        </Button>
-      </ButtonRow>
+      <Box grow={false}>
+        <Stack>
+          <Textarea
+            required={true}
+            name="message"
+            label="Message"
+            onInput={setMessage}
+            validationMessage={
+              !message ? 'Please add a nice message for your contact.' : ''
+            }
+          />
+          <ButtonRow>
+            <Button
+              disabled={!message}
+              variant="primary"
+              onClick={() => {
+                onCheckoutClick(message);
+              }}
+            >
+              Checkout
+            </Button>
+          </ButtonRow>
+        </Stack>
+      </Box>
     </Stack>
   );
 };

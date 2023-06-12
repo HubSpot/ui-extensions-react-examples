@@ -12,13 +12,15 @@ import { CartItemRow } from './CartItemRow';
 export const Cart = ({ cart, onRemoveClick }: CartProps) => {
   if (!cart.length) {
     return (
-      <EmptyState
-        layout="vertical"
-        reverseOrder={true}
-        title="Nothing in the cart yet"
-      >
-        Add some food to send to your contact!
-      </EmptyState>
+      <Stack align="center">
+        <EmptyState
+          layout="vertical"
+          reverseOrder={true}
+          title="Nothing in the cart yet"
+        >
+          Add some food to send to your contact!
+        </EmptyState>
+      </Stack>
     );
   }
 
