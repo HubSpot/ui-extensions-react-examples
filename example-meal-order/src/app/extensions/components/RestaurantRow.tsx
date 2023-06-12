@@ -7,9 +7,7 @@ import {
   TableCell,
   Image,
   Stack,
-  Tile,
   Box,
-  Link,
 } from '@hubspot/ui-extensions';
 import { RestaurantRowProps } from '../types';
 import { Rating } from './Rating';
