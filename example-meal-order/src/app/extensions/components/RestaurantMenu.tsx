@@ -30,7 +30,7 @@ export const RestaurantMenu = ({
   return (
     <Stack align="stretch">
       <Box>
-        <Link preventDefault={true} onClick={handleBackClick} href="#">
+        <Link preventDefault={true} onClick={handleBackClick}>
           {'< Back'}
         </Link>
       </Box>
