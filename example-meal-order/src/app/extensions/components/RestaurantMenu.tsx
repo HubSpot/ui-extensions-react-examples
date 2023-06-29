@@ -7,6 +7,7 @@ import {
   Divider,
   Box,
   Link,
+  Button,
 } from '@hubspot/ui-extensions';
 import { RestaurantMenuProps } from '../types';
 import { MenuItemDetails } from './MenuItemDetails';
@@ -29,9 +30,7 @@ export const RestaurantMenu = ({
   return (
     <Stack align="stretch">
       <Box>
-        <Link preventDefault={true} onClick={handleBackClick}>
-          {'< Back'}
-        </Link>
+        <Button onClick={handleBackClick}>{'< Back'}</Button>
       </Box>
       <Heading>{restaurant.name}</Heading>
       <Divider />
