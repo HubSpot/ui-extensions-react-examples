@@ -21,7 +21,7 @@ export const RestaurantRow = ({ restaurant, onClick }: RestaurantRowProps) => {
 
   return (
     <TableRow>
-      <TableCell>
+      <TableCell width="65%" minWidth={300}>
         <Stack direction="row" distance="xs">
           <Image src={image} width={66} />
           <Box>
@@ -33,20 +33,14 @@ export const RestaurantRow = ({ restaurant, onClick }: RestaurantRowProps) => {
           </Box>
         </Stack>
       </TableCell>
-      <TableCell>
-        <Stack align="center">
-          <Text>{timeRange(deliveryInMinutes)}</Text>
-        </Stack>
+      <TableCell minWidth={120}>
+        <Text inline={true}>{timeRange(deliveryInMinutes)}</Text>
       </TableCell>
-      <TableCell>
-        <Stack align="center">
-          <Text>{formatPrice(deliveryCost)} delivery</Text>
-        </Stack>
+      <TableCell minWidth={140}>
+        <Text inline={true}>{formatPrice(deliveryCost)} delivery</Text>
       </TableCell>
-      <TableCell>
-        <Stack align="end">
-          <Button onClick={onClick}>Menu</Button>
-        </Stack>
+      <TableCell align="right">
+        <Button onClick={onClick}>Menu</Button>
       </TableCell>
     </TableRow>
   );

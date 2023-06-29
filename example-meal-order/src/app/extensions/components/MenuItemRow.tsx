@@ -5,7 +5,6 @@ import {
   Text,
   TableRow,
   TableCell,
-  Stack,
 } from '@hubspot/ui-extensions';
 import { MenuItemRowProps } from '../types';
 import { formatPrice } from '../utils';
@@ -17,10 +16,8 @@ export const MenuItemRow = ({ item, onClick }: MenuItemRowProps) => {
         <Heading>{item.name}</Heading>
         <Text variant="microcopy">{item.description}</Text>
       </TableCell>
-      <TableCell>
-        <Stack align="end">
-          <Button onClick={onClick}>{formatPrice(item.price)}</Button>
-        </Stack>
+      <TableCell align="right" width={150}>
+        <Button onClick={onClick}>{formatPrice(item.price)}</Button>
       </TableCell>
     </TableRow>
   );

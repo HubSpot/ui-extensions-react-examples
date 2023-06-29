@@ -28,8 +28,8 @@ export const RestaurantsSearch = ({
   });
 
   return (
-    <Stack>
-      <Box>
+    <Stack align="stretch">
+      <Box alignSelf="start">
         <Input
           name="search"
           label={`Search for restaurants near ${contactName}`}
@@ -38,15 +38,13 @@ export const RestaurantsSearch = ({
           onInput={handleSearch}
         />
       </Box>
-      <Box alignSelf="stretch">
-        <RestaurantsTable
-          pageNumber={pageNumber}
-          onClick={handleRestaurantClick}
-          searchTerm={searchTerm}
-          restaurants={searchResults}
-          onPageChange={setPageNumber}
-        />
-      </Box>
+      <RestaurantsTable
+        pageNumber={pageNumber}
+        onClick={handleRestaurantClick}
+        searchTerm={searchTerm}
+        restaurants={searchResults}
+        onPageChange={setPageNumber}
+      />
     </Stack>
   );
 };
