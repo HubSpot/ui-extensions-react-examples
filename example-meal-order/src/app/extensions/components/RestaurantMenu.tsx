@@ -1,11 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import {
   Heading,
-  Button,
   Stack,
   Table,
   TableBody,
   Divider,
+  Box,
+  Link,
+  Button,
 } from '@hubspot/ui-extensions';
 import { RestaurantMenuProps } from '../types';
 import { MenuItemDetails } from './MenuItemDetails';
@@ -26,8 +28,10 @@ export const RestaurantMenu = ({
   );
 
   return (
-    <Stack>
-      <Button onClick={handleBackClick}>{'< Back'}</Button>
+    <Stack align="stretch">
+      <Box>
+        <Button onClick={handleBackClick}>{'< Back'}</Button>
+      </Box>
       <Heading>{restaurant.name}</Heading>
       <Divider />
       {selectedMenuItem ? (

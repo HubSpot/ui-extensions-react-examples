@@ -128,7 +128,7 @@ export const OrderMealCard = ({
   const subtotal = cart.reduce((total, item) => total + item.price, 0);
 
   return (
-    <Stack>
+    <Stack align="stretch">
       <Text>
         {context.user.firstName}, you are crushing your deals with this contact.
         Gift them a meal to celebrate! 🍜

@@ -16,7 +16,7 @@ export const MenuItemRow = ({ item, onClick }: MenuItemRowProps) => {
         <Heading>{item.name}</Heading>
         <Text variant="microcopy">{item.description}</Text>
       </TableCell>
-      <TableCell>
+      <TableCell align="right" width={150}>
         <Button onClick={onClick}>{formatPrice(item.price)}</Button>
       </TableCell>
     </TableRow>

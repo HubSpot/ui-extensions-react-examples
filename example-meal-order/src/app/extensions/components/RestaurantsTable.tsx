@@ -1,5 +1,12 @@
 import React from 'react';
-import { Table, TableBody, Text } from '@hubspot/ui-extensions';
+import {
+  Table,
+  TableBody,
+  TableHead,
+  TableHeader,
+  TableRow,
+  Text,
+} from '@hubspot/ui-extensions';
 import { RestaurantRow } from './RestaurantRow';
 import { RestaurantsTableProps } from '../types';
 

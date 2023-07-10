@@ -30,7 +30,9 @@ export const CartItemRow = ({ item, onRemoveClick }: CartItemRowProps) => {
       </TableCell>
       <TableCell>{formatPrice(item.price)}</TableCell>
       <TableCell>
-        <Button onClick={onRemoveClick}>Remove</Button>
+        <Stack align="end">
+          <Button onClick={onRemoveClick}>Remove</Button>
+        </Stack>
       </TableCell>
     </TableRow>
   );
