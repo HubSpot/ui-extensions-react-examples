@@ -1,7 +1,5 @@
 exports.main = async (context = {}, sendResponse) => {
-  setTimeout(() => {
-    sendResponse(demoRestaurants);
-  }, 1000);
+  sendResponse(demoRestaurants);
 };
 
 const demoMenu = {
