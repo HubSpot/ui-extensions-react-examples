@@ -1,0 +1,15 @@
+{
+  "name": "CRM Components React App",
+  "description": "This is an example of private app that shows a custom card. It demonstrates usages of CRM Components",
+  "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
+  "public": false,
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "extensions/example-card.json"
+        }
+      ]
+    }
+  }
+}
