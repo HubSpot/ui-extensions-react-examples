@@ -1,9 +1,9 @@
 {
-  "name": "example-extension",
+  "name": "crm-association-table-extension",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
-  "main": "Example.jsx",
+  "main": "AssociationTableExtension.jsx",
   "scripts": {
     "dev": "hs-ui-extensions-dev-server dev",
     "build": "hs-ui-extensions-dev-server build"
