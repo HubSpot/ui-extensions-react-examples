@@ -33,7 +33,7 @@ export const RestaurantRow = ({ restaurant, onClick }: RestaurantRowProps) => {
           </Box>
         </Stack>
       </TableCell>
-      <TableCell width="max">
+      <TableCell width="min">
         <Text inline={true}>{timeRange(deliveryInMinutes)}</Text>
       </TableCell>
       <TableCell width="min">

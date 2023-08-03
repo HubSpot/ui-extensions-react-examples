@@ -33,7 +33,7 @@ export const OrderMealCard = ({
     setError(false);
     // Fetch a list of restaurants and their menus from our serverless function
     runServerless({ name: 'restaurants' })
-      .then(async (result) => {
+      .then(async result => {
         if (result.status === 'SUCCESS') {
           // Make sure the response is the shape we expect (array of Restaurants)
           if (Array.isArray(result.response)) {
@@ -58,7 +58,7 @@ export const OrderMealCard = ({
 
         throw new Error(result.message);
       })
-      .catch((error) => {
+      .catch(error => {
         console.error(error.message);
         setError(true);
       })
@@ -83,7 +83,7 @@ export const OrderMealCard = ({
 
   const handleRemoveClick = useCallback((id: number) => {
     updateCart((items: Array<CartItem>) =>
-      items.filter((item) => item.id !== id)
+      items.filter(item => item.id !== id)
     );
   }, []);
 
@@ -116,10 +116,10 @@ export const OrderMealCard = ({
 
   // Small utility function for help below
   const getRestaurant = (id?: number) => {
-    return restaurants.find((r) => r.id === id);
+    return restaurants.find(r => r.id === id);
   };
 
-  const uniqueRestaurants = new Set(cart.map((item) => item.restaurantId));
+  const uniqueRestaurants = new Set(cart.map(item => item.restaurantId));
   const totalDeliveryCost = [...uniqueRestaurants].reduce((total, id) => {
     return total + (getRestaurant(id)?.deliveryCost ?? 0);
   }, 0);
