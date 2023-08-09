@@ -1,6 +1,6 @@
 {
-  "name": "CRM Stage Tracker React App",
-  "description": "This is an example of private app that shows a custom card. It demonstrates usages of CRM Components",
+  "name": "CRM Components React App",
+  "description": "This is an example of private app that shows 2 custom cards. It demonstrates usages of CRM Components",
   "scopes": [
     "crm.objects.contacts.read",
     "crm.objects.contacts.write",
@@ -13,6 +13,9 @@
       "cards": [
         {
           "file": "extensions/stage-tracker.json"
+        },
+        {
+          "file": "extensions/association-table.json"
         }
       ]
     }

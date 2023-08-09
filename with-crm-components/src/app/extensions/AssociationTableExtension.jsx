@@ -6,21 +6,13 @@ import {
 import { CrmAssociationTable } from '@hubspot/ui-extensions/crm';
 
 // Define the extension to be run within the Hubspot CRM
-hubspot.extend(({ context, runServerlessFunction, actions }) => (
+hubspot.extend(({ context}) => (
   <Extension
     context={context}
-    runServerless={runServerlessFunction}
-    sendAlert={actions.addAlert}
   />
 ));
 
-const Extension = ({ context, runServerless, sendAlert }) => {
-  const run = () => {
-    runServerless({ name: 'myFunc', parameters: { text: text } }).then((resp) =>
-      sendAlert({ message: resp.response })
-    );
-  };
-
+const Extension = ({context}) => {
   return (
     <>
        <Text format={{ fontWeight: 'bold' }}>Important Deals</Text>
