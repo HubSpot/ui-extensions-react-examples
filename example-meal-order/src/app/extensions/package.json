@@ -5,8 +5,7 @@
   "license": "MIT",
   "main": "OrderMealExtension.tsx",
   "scripts": {
-    "dev": "hs-ui-extensions-dev-server dev",
-    "build": "hs-ui-extensions-dev-server build"
+    "dev": "hs project dev"
   },
   "repository": {
     "type": "git",
